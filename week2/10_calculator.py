@@ -14,27 +14,47 @@ print('''
 2. 빼기
 3. 곱하기
 4. 나누기
+5. 종료(q, Q)
 ''')
+while True:
+    action = input('기능을 입력하세요: ')
+    if action not in ['1','2','3','5','q','Q']:
+        print('잘못된 기능입니다. 다시 입력해주세요.')
+        continue
 
-action = int(input('기능을 입력하세요: '))
+    # if action == '5':
+    #     break
+    # elif action == 'q':
+    #     break
+    # elif action == 'Q':
+    #     break
 
-num1 = int(input('첫 번째 숫자를 입력하세요: '))
-num2 = int(input('두 번째 숫자를 입력하세요: '))
+    # if action == '5' or action == 'q' or action == 'Q':
+    #     break
 
-if action == 1:
-    pass
+    if action in ['5', 'q', 'Q']:
+        exit() # break
 
-if action == 1:
-    result = num1 + num2
-    print(num1, ' + ', num2, ' = ', result)
-elif action == 2:
-    result = num1 - num2
-    print(num1, ' - ', num2, ' = ', result)
-elif action == 3:
-    result = num1 * num2
-    print(num1, ' x ', num2, ' = ', result)
-elif action == 4:
-    result = num1 / num2
-    print(num1, ' / ', num2, ' = ', result)
-else:
-    print('잘못된 기능입니다.')
+    action = int(action)
+
+    num1 = int(input('첫 번째 숫자를 입력하세요: '))
+    num2 = int(input('두 번째 숫자를 입력하세요: '))
+
+    if action == 1:
+        result = num1 + num2
+        print(num1, ' + ', num2, ' = ', result)
+    elif action == 2:
+        result = num1 - num2
+        print(num1, ' - ', num2, ' = ', result)
+    elif action == 3:
+        result = num1 * num2
+        print(num1, ' x ', num2, ' = ', result)
+    elif action == 4:
+        result = num1 / num2
+        print(num1, ' / ', num2, ' = ', result)
+    elif action == 5:
+        break
+    else:
+        print('잘못된 기능입니다.')
+
+print('멋쟁이사자처럼 계산기를 이용해주셔서 감사합니다. 문의 0000-0000')
