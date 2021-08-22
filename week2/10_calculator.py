@@ -6,8 +6,8 @@
 # 3. 계산할 숫자 두개를 입력 받는다.
 # 4. 계산 한 결과값을 출력한다.
 
-print('[멋쟁이 사자처럼 계산기]')
-print('\n원하는 기능을 입력 후 계산할 두 숫자를 입력해주세요.')
+print('[멋쟁이 사자처럼 계산기]')  # 계산기 이름 출력
+print('\n원하는 기능을 입력 후 계산할 두 숫자를 입력해주세요.')  # 사용자에게 사용법 출력
 print('''
 기능 목록
 1. 더하기
@@ -15,7 +15,9 @@ print('''
 3. 곱하기
 4. 나누기
 5. 종료(q, Q)
+=======
 ''')
+
 while True:
     action = input('기능을 입력하세요: ')
     if action not in ['1','2','3','5','q','Q']:
@@ -33,7 +35,7 @@ while True:
     #     break
 
     if action in ['5', 'q', 'Q']:
-        exit() # break
+        break # exit()
 
     action = int(action)
 
