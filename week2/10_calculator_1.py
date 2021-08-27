@@ -18,6 +18,10 @@ print('''
 =======
 ''')
 
+def add_num1_num2(num1, num2):
+    result = num1 + num2
+    return add_num1_num2
+
 while True:
     action = input('기능을 입력하세요: ')
     if action not in ['1','2','3','5','q','Q']:
@@ -43,7 +47,7 @@ while True:
     num2 = int(input('두 번째 숫자를 입력하세요: '))
 
     if action == 1:
-        result = num1 + num2
+        result = add_num1_num2(num1, num2)
         print(num1, ' + ', num2, ' = ', result)
     elif action == 2:
         result = num1 - num2
@@ -60,3 +64,4 @@ while True:
         print('잘못된 기능입니다.')
 
 print('멋쟁이사자처럼 계산기를 이용해주셔서 감사합니다. 문의 0000-0000')
+
