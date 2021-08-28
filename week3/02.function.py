@@ -1,37 +1,3 @@
-def add(num1, num2):
-    return num1 + num2
-
-def add():
-    print('Eun add()')
-
-def add(num1, num2):
-    print(num1 + num2)
-    print('Eun add()')
-
-def get_year():
-    return 2021
-
-number_list = [3, 5, 1, 2, 6, 43, 8, 4, 6, 4,]
-
-print(number_list)
-sorted_number_list = sorted(number_list, reverse=True)
-print(sorted_number_list)
-
-
-
-
-
-
-# ### 함수(function) 실습
-
-# def add(num1, num2):
-#     result = num1 + num2
-#     return result
-
-# result = add(2, 5)
-# print(result)
-
-
 # ### 내장 함수
 
 # # 숫자의 절댓값을 돌려줍니다.
