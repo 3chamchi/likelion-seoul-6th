@@ -9,6 +9,7 @@
 ## 목차
 [Python](Python)  
 - [공식문서](공식문서)  
+- [파이썬 명령어](파이썬-명령어)  
 - [알아두면 좋은 정보](알아두면-좋은-정보)  
   - [용어](용어)
   - [유용한 내장 함수](유용한-내장-함수)
@@ -17,6 +18,7 @@
 
 [장고(Django)](장고(Django))
 - [공식문서](공식문서)
+- [장고 명령어](장고-명령어)
 
 [VSCode, 코드편집기](VSCode,-코드편집기)  
 - [단축키](단축키)  
@@ -32,6 +34,32 @@
 * [파이썬 공식문서 바로가기](https://docs.python.org/3/)  
 * [파이썬 언어 레퍼런스 바로가기](https://docs.python.org/ko/3/reference/index.html)  
 * [파이썬 용어집](https://docs.python.org/ko/3/glossary.html#glossary)
+
+## 파이썬 명령어
+### 패키지 확인
+```
+pip list
+```  
+
+### 패키지 설치
+```
+pip install 패키지명
+```  
+
+### 패키지 삭제
+```
+pip uninstall 패키지명
+```  
+
+### 패키지 업데이트
+```
+pip install --upgrade 패키지명
+```
+
+### 가상환경 생성
+```
+python -m venv 가상환경명
+```
 
 ## 알아두면 좋은 정보
 ### 용어
@@ -58,6 +86,30 @@
 ## 공식문서  
 * [장고 공식 홈페이지 바로가기](https://www.djangoproject.com/)  
 * [장고 공식문서 바로가기](https://docs.djangoproject.com/en/3.2/)  
+
+## 장고 명령어
+### 장고 설치
+```
+pip install django
+```  
+
+### 장고 프로젝트 생성
+```
+django-admin startproject 프로젝트명 프로젝트경로
+```
+> 디렉토리를 서비스명으로 만든 뒤 생상된 디렉토리에서 프로젝트명을 config로 만드는 것을 권장함
+
+### 장고 앱 생성
+```
+django-admin startpapp 앱명
+```
+
+### 장고 개발서버 실행
+```
+python manage.py runserver
+```
+> 서버 실행 명력어 입력 시 manage.py 파일의 경로에 있어야 함
+
 <br/><br/>
 
 # VSCode, 코드편집기
