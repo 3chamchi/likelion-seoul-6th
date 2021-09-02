@@ -13,9 +13,13 @@
   - [용어](용어)
   - [유용한 내장 함수](유용한-내장-함수)
   - [자료형 및 연산자](자료형-및-연산자)
-  - [PEP8](PEP8)
+  - [PEP8](PEP8)  
 
-[VSCode 확장 프로그램(VSCode Extension)](VSCode-확장-프로그램(VSCode-Extension))  
+[장고(Django)](장고(Django))
+- [공식문서](공식문서)
+
+[VSCode, 코드편집기](VSCode,-코드편집기)  
+- [단축키](단축키)  
 - [필수 확장 프로그램](필수-확장-프로그램)  
 - [추천 확장 프로그램](추천-확장-프로그램)  
 - [HTML, CSS 추천 확장 프로그램](HTML,-CSS-추천-확장-프로그램)  
@@ -42,19 +46,29 @@
 * ```print()``` : objects 를 텍스트 스트림 file 로 인쇄하는데, sep 로 구분되고 end 를 뒤에 붙입니다. 있다면, sep, end, file 및 flush 는 반드시 키워드 인자로 제공해야 합니다.
 * ```input()``` : prompt 인자가 있으면, 끝에 개행 문자를 붙이지 않고 표준 출력에 씁니다.
 
-
-
 ### 자료형 및 연산자
-* [공식문서 바로가기](https://docs.python.org/ko/3/library/stdtypes.html)
+* [공식문서 바로가기](https://docs.python.org/ko/3/library/stdtypes.html)  
+
 ### PEP8
 * Python 코드용 스타일 가이드
 * [공식문서 바로가기](https://www.python.org/dev/peps/pep-0008/)
+<br/><br/>  
 
-#  VSCode 확장 프로그램(VSCode Extension)
-> VSCode 확장 프로그램이란 VSCode의 기본기능의 외에 기능을 추가하는 것으로 사용자에게 도움을 주는 추가 프로그램
+# 장고(Django)
+## 공식문서  
+* [장고 공식 홈페이지 바로가기](https://www.djangoproject.com/)  
+* [장고 공식문서 바로가기](https://docs.djangoproject.com/en/3.2/)  
+<br/><br/>
 
+# VSCode, 코드편집기
+## 단축키
+* Ctrl + / : 주석, 코드 여러줄 가능
+* Ctrl + K + F : 코드 자동 정렬 -> pip install autopep8 필요
+* Ctrl + F : 활성 파일 내 단어 검색
 
 ## 필수 확장 프로그램
+> VSCode 확장 프로그램이란 VSCode의 기본기능의 외에 기능을 추가하는 것으로 사용자에게 도움을 주는 추가 프로그램  
+
 ### python 
 * 파이썬 개발의 필수로 파이썬 개발을 도와줍니다.
 * [다운로드 링크](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
@@ -63,8 +77,16 @@
 * 파이썬 자동완성 서포트
 * [다운로드 링크](https://marketplace.visualstudio.com/items?itemName=frhtylcn.pythonsnippets)
 
-## 추천 확장 프로그램
+### django 
+* 장고 템플릿 언어 지원
+* [다운로드 링크](https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django)
 
+### SQLite
+* 개발 테스트용 SQLite 뷰어 지원
+* [다운로드 링크](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)
+<br/><br/>  
+
+## 추천 확장 프로그램  
 ### Better Comments 
 * 주석의 활용(기능)을 높여줍니다.
 * [다운로드 링크](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
@@ -91,9 +113,7 @@
 * [다운로드 링크](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
 
 ### HTML CSS Support 
-* 
 * [다운로드 링크](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
 
 ### CSS Peek
-* 
 * [다운로드 링크](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek)
