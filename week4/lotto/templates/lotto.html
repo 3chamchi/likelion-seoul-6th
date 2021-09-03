@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            margin: 5px 5px 5px 5px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+    <title>로또 번호 생성기</title>
+</head>
+<body>
+    <!-- div.container>div.item.item${$}*8 -->
+    <h1>로또 번호 생성기</h1>
+    <p>번호 : {{ lotto_number }}</p>
+    <div class="container">
+        <div class="item"><p>{{ lotto_number.0 }}</p></div>
+        <div class="item"><p>{{ lotto_number.1 }}</p></div>
+        <div class="item"><p>{{ lotto_number.2 }}</p></div>
+        <div class="item"><p>{{ lotto_number.3 }}</p></div>
+        <div class="item"><p>{{ lotto_number.4 }}</p></div>
+        <div class="item"><p>{{ lotto_number.5 }}</p></div>
+        <div class="item"><p> + </p></div>
+        <div class="item"><p>{{ lotto_number.6 }}</p></div>
+    </div>
+    <a href="/lotto/">새 번호 받기</a>
+</body>
+</html>

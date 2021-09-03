@@ -36,6 +36,8 @@
 * [파이썬 용어집](https://docs.python.org/ko/3/glossary.html#glossary)
 
 ## 파이썬 명령어
+> 맥북을 사용하시는 분은 ```python```을 ```python3```로 ```pip```를 ```pip3```로 사용하셔야합니다. 맥북엔 기본으로 사용하는 python이 있어 그렇습니다.  
+
 ### 패키지 확인
 ```
 pip list
@@ -82,6 +84,14 @@ python -m venv 가상환경명
 * [공식문서 바로가기](https://www.python.org/dev/peps/pep-0008/)
 <br/><br/>  
 
+### 파이썬 설치시 "Add python x.x to path"를 안한 경우
+* 직접 파이썬 환경 변수를 설정해주어야 한다.<br/> 시스템에서 파이썬이 어디에 설치되었는지 알려주기 위함
+* 윈도우 키 > 시스템 환경변수 > 환경 변수 > user에 대한 사용자 변수 > 변수 Path 편집 > 파이썬 설치 위치, Scripts 추가
+  > 시스템 속성 > 고급 > 환경 변수 > user에 대한 사용자 변수 > 변수 Path 편집 > 파이썬 설치 위치, Scripts 추가
+* 환경 변수
+   * C:\Users\User\AppData\Local\Programs\Python\Python37\Scripts\
+   * C:\Users\User\AppData\Local\Programs\Python\Python37\
+
 # 장고(Django)
 ## 공식문서  
 * [장고 공식 홈페이지 바로가기](https://www.djangoproject.com/)  
@@ -114,9 +124,15 @@ python manage.py runserver
 
 # VSCode, 코드편집기
 ## 단축키
-* Ctrl + / : 주석, 코드 여러줄 가능
-* Ctrl + K + F : 코드 자동 정렬 -> pip install autopep8 필요
-* Ctrl + F : 활성 파일 내 단어 검색
+* ```Ctrl``` + ```/``` : 주석, 코드 여러줄 가능
+* ```Ctrl``` + ```K``` + ```F``` : 코드 자동 정렬 -> ```pip install autopep8``` 필요
+* ```Ctrl``` + ```F``` : 활성 파일 내 단어 검색
+* ```Ctrl``` + ``` ` ``` : 터미널 실행
+
+
+## 기본 설정
+### 기본 터미널 설정
+* 명령 팔레트(```Ctrl``` + ```Shift``` + ```P```) > ```Terminal: Select Default Profile``` > ```cmd``` 선택
 
 ## 필수 확장 프로그램
 > VSCode 확장 프로그램이란 VSCode의 기본기능의 외에 기능을 추가하는 것으로 사용자에게 도움을 주는 추가 프로그램  
