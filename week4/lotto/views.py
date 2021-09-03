@@ -1,16 +1,11 @@
-from random import sample
-from datetime import datetime
+import random
 
-from django.http import HttpResponse
 from django.shortcuts import render
-from django.template import loader
-# https://docs.djangoproject.com/en/3.2/topics/templates/#django.template.backends.base.Template.render
 
 
-def index(req):
-    number_list = sample(range(1,46), 6)
-    template = loader.get_template('index.html')
+def index(request):
+    lotto_number = random.sample(range(1, 46), 7)
     context = {
-        'number_list': number_list,
+        'lotto_number': lotto_number,
     }
-    return HttpResponse(template.render(context))
+    return render(request, 'lotto.html', context)

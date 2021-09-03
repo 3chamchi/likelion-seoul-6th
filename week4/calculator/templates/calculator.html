@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>장고 계산기</title>
+</head>
+
+<body>
+    <h1>장고 계산기</h1>
+
+    <form action="." method="get">
+        <label for="id_formula"> 계산할 식 : </label>
+        <input id="id_formula" type="text" name="formula">
+        <button type="submit">계산하기</button>
+    </form>
+    
+    {% if result %}
+    <p> 결과값 : {{ result }} </p>
+    {% endif %}
+</body>
+
+</html>
