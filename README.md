@@ -16,7 +16,7 @@
   - [자료형 및 연산자](#자료형-및-연산자)
   - [PEP8](#PEP8)  
 
-[장고(Django)](#장고(Django))
+[장고](#장고)
 - [공식문서](#공식문서)
 - [장고 명령어](#장고-명령어)
 
@@ -92,7 +92,7 @@ python -m venv 가상환경명
    * C:\Users\User\AppData\Local\Programs\Python\Python37\Scripts\
    * C:\Users\User\AppData\Local\Programs\Python\Python37\
 
-# 장고(Django)
+# 장고
 ## 공식문서  
 * [장고 공식 홈페이지 바로가기](https://www.djangoproject.com/)  
 * [장고 공식문서 바로가기](https://docs.djangoproject.com/en/3.2/)  
