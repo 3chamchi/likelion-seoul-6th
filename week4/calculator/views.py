@@ -1,15 +1,17 @@
 from django.shortcuts import render
-from django.template import loader
+from django.http import HttpResponse
 
+# Create your views here.
 def index(request):
     formula = request.GET.get('formula')
-
+    print(formula)
+    
+    result = None
     if formula:
         result = eval(formula)
-    else:
+    else: 
         result = None
 
-    context = {
-        'result' : result
-    }
-    return render(request, 'calculator.html', context)
+    return render(request, 'calculator.html', {'result': result})
+    # http_result = 'HttpResponse()'+ str(result)
+    # return HttpResponse(http_result)
