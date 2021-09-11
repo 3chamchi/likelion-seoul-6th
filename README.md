@@ -1,4 +1,4 @@
- 멋쟁이사자처럼 직장인 서울 6기
+멋쟁이사자처럼 직장인 서울 6기
 =====
 ## HACK YOUR LIFE
 ### 당신의 아이디어를 실현해보세요.  
@@ -37,7 +37,6 @@
 
 ## 파이썬 명령어
 > 맥북을 사용하시는 분은 ```python```을 ```python3```로 ```pip```를 ```pip3```로 사용하셔야합니다. 맥북엔 기본으로 사용하는 python이 있어 그렇습니다.  
-
 ### 패키지 확인
 ```
 pip list
@@ -91,7 +90,6 @@ python -m venv 가상환경명
 * 환경 변수
    * C:\Users\User\AppData\Local\Programs\Python\Python37\Scripts\
    * C:\Users\User\AppData\Local\Programs\Python\Python37\
-
 # 장고
 ## 공식문서  
 * [장고 공식 홈페이지 바로가기](https://www.djangoproject.com/)  
@@ -108,7 +106,6 @@ pip install django
 django-admin startproject 프로젝트명 프로젝트경로
 ```
 > 디렉토리를 서비스명으로 만든 뒤 생상된 디렉토리에서 프로젝트명을 config로 만드는 것을 권장함
-
 ### 장고 앱 생성
 ```
 django-admin startpapp 앱명
@@ -119,7 +116,6 @@ django-admin startpapp 앱명
 python manage.py runserver
 ```
 > 서버 실행 명력어 입력 시 manage.py 파일의 경로에 있어야 함
-
 <br/><br/>
 
 # VSCode, 코드편집기
@@ -136,7 +132,6 @@ python manage.py runserver
 
 ## 필수 확장 프로그램
 > VSCode 확장 프로그램이란 VSCode의 기본기능의 외에 기능을 추가하는 것으로 사용자에게 도움을 주는 추가 프로그램  
-
 ### python 
 * 파이썬 개발의 필수로 파이썬 개발을 도와줍니다.
 * [다운로드 링크](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
