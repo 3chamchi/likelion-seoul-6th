@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <style>
+        table, tr, th, td {
+            border: 1px solid #444444;
+        }
+
+        table {
+            min-width: 800px;
+        }
+
+        tr > th:nth-child(1) {
+            width: 30px;
+        }
+
+        tr > th:last-child {
+            width: 200px;
+            text-align: center;
+        }
+
+        ul {
+            display: flex;
+            margin:0 auto;
+            list-style:none;
+        }
+
+        li {
+            margin:0 5px;
+        }
+
+        .cancel_text {
+            text-decoration:line-through
+        } 
+    </style>
+    </head>
+    <body>
+        <h1>게시글 목록</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>내용</th>
+                    <th>작성일</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in posts %}
+                    <tr>
+                        <td>{{ post.id }}</td>
+                        <td>{{ post.title }}</td>
+                        <td>{{ post.content|truncatechars:30 }}</td>
+                        <td>{{ post.created_at }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="4">글이 존재하지 않습니다.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <ul>
+            {% if pagenation.has_previous %}
+                <li><a href="?page={{ pagenation.previous_page_number }}">이전 페이지</a></li>
+            {% else %}
+                <li><a class="cancel_text">이전 페이지</a></li>
+            {% endif %}
+            {% if pagenation.has_next %}
+                <li><a href="?page={{ pagenation.next_page_number }}">다음 페이지</a></li>
+            {% else %}
+                <li><a class="cancel_text">다음 페이지</a></li>
+            {% endif %}
+        </ul>
+    </body>
+</html>
