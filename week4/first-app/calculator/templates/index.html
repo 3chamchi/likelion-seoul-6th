@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+</head>
+
+<body>
+<h1>장고 계산기</h1>
+
+<form action="." method="GET">
+    <label>계산할 식을 입력해주세요 : </label>
+    <input type="text" name="text"/>
+    <button type="submit">계산하기</button>
+</form>
+
+{% if result %}
+    <p>계산된 값 : {{ result }}</p>
+{% else %}
+    <p>값을 입력해주세요.</p>
+{% endif %}
+
+</body>
+
+</html>
