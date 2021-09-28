@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from django.contrib.admin.decorators import register
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .models import Post
 
@@ -29,4 +29,4 @@ def create(request):
         created_by=created_by,  # Post 모델 created_by 필드에 created_by 변수 값 입력
         created_at=now,  # Post 모델 created_at 필드에 now 변수 값 입력
     )
-    return render(request, 'list.html')
+    return redirect('/')
