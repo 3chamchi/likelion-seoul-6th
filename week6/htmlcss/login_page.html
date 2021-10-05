@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- title 태그 이미지 삽입 태그 링크 -->
+		<link
+			href="./assets/images/banner_title_image/title_image.jpg"
+			rel="shortcut icon"
+			type="image/x-icon"
+		/>
+
+		<!-- CSS 파일 링크 -->
+		<link rel="stylesheet" href="css_reset.css" />
+		<link rel="stylesheet" href="login_page.css" />
+
+		<!-- 폰트 링크 (CDN) -->
+		<link
+			href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+			rel="stylesheet"
+			type="text/css"
+		/>
+		<title>classlion</title>
+	</head>
+
+	<body>
+		<!-- header & navigation bar -->
+		<header class="container">
+			<div class="header">
+				<div class="header__logo">
+					<img src="./assets/images/logo/logo_sample.png" alt="" />
+				</div>
+				<nav class="navbar">
+					<ul class="navbar__list">
+						<li class="nabar__list__item-one"><a href="">로그인 / 회원가입</a></li>
+						<li class="nabar__list__item-two"><a href="">자유 게시판</a></li>
+						<li class="nabar__list__item-three"><a href="">Q & A</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- login -->
+		<main class="container">
+			<div class="login">
+				<div class="login__title">일반 로그인</div>
+				<form class="login__form" action="">
+					<label for="email_id">
+						<p class="login__form__label">이메일</p>
+					</label>
+					<input type="email" id="email_id" name="user_email" placeholder="email@naver.com" />
+					<label for="password_id">
+						<p class="login__form__label">비밀번호</p>
+					</label>
+					<input type="password" id="password_id" name="user_password" placeholder="************" />
+					<div class="login__form__password-find">
+						<a href="">비밀번호 찾기</a>
+					</div>
+					<div class="login__form__login-submit">
+						<button type="submit" value="">로그인</button>
+					</div>
+				</form>
+				<div class="sign-up">
+					<a href="">
+						<button type="button">회원가입</button>
+					</a>
+				</div>
+			</div>
+		</main>
+
+		<!-- kakao_ask  -->
+		<div class="kakao_ask">
+			<a href="">
+				<img src="./assets/images/logo/kakao_logo.svg" alt="카카오 문의시 클릭 하세요." />
+			</a>
+		</div>
+
+		<!-- footer -->
+		<footer class="container-wd">
+			<div class="footer">
+				<!-- <div class="container"> -->
+				<div class="footer__inner">
+					<div class="footer__inner__header">
+						<div class="footer__inner__header-number">02-6203-1222</div>
+						<div class="footer__inner__header-social">
+							<a href="https://www.facebook.com/" target="_blank">
+								<img
+									class="social-logo medium"
+									src="./assets/images/logo/facebook_logo.png"
+									alt="페이스북"
+								/>
+							</a>
+							<a href="https://www.instagram.com/" target="_blank">
+								<img
+									class="social-logo small"
+									src="./assets/images/logo/instagram_logo.png"
+									alt="인스타그램"
+								/>
+							</a>
+							<a href="https://www.naver.com" target="_blank">
+								<img
+									class="social-logo medium"
+									src="./assets/images/logo/naver_logo.png"
+									alt="네이버"
+								/>
+							</a>
+							<a href="https://www.youtube.com" target="_blank"
+								><img
+									class="social-logo last"
+									src="./assets/images/logo/youtube_logo.png"
+									alt="유튜브"
+								/>
+							</a>
+						</div>
+					</div>
+					<p class="footer__inner__hours">11:00 - 19:00 | off-time 12:00 - 13:00</p>
+					<p class="footer__inner__manager-emali">works@likelion.net</p>
+					<div class="footer__inner__policy">
+						<a href="">이용약관</a>
+						<a href="">개인정보취급방침</a>
+						<a href="">환불규정</a>
+					</div>
+					<div class="footer__inner__information">
+						<ul class="footer__inner__information-list">
+							<li class="information-list__one">서울특별시 강남구 봉은사로 82길 13</li>
+							|
+							<li class="information-list__two">대표 이두희</li>
+							|
+							<li class="information-list__three">사업자번호: 264-88-01106</li>
+							|
+							<li class="information-list__four">통신판매업 신고번호: 2019-서울강남-00774</li>
+						</ul>
+					</div>
+				</div>
+				<!-- </div> -->
+			</div>
+		</footer>
+	</body>
+</html>

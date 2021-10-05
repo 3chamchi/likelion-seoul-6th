@@ -1,0 +1,270 @@
+/* header - (상단 메뉴) */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	max-width: 1200px;
+	margin: 0px auto;
+	color: rgb(255, 255, 255);
+}
+
+.header__logo img {
+	background-size: cover;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+}
+
+.navbar__list {
+	display: flex;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.nabar__list__item-one {
+	margin-right: 20px;
+}
+
+.nabar__list__item-two {
+	margin-right: 20px;
+}
+
+/* banner - 배너 */
+.banner__img img {
+	object-fit: cover;
+	height: 700px;
+	width: 100%;
+	height: 490px;
+}
+
+.banner {
+	position: relative;
+}
+
+.left-icon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 15%;
+	opacity: 0.5;
+	transition: opacity 0.15s ease;
+	background-color: transparent;
+}
+
+.left-icon i {
+	background-color: transparent;
+	font-size: 30px;
+}
+
+.right-icon {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 15%;
+	opacity: 0.5;
+	transition: opacity 0.15s ease;
+	background-color: transparent;
+}
+
+.right-icon > i {
+	background-color: transparent;
+	font-size: 30px;
+}
+
+.right-icon:hover,
+.left-icon:hover {
+	opacity: 1;
+}
+
+/* class section - 강의 클래스 */
+.class-section__inner {
+	max-width: 1200px;
+	margin: 80px auto 0px;
+}
+
+.class-section__inner__title {
+	font-weight: bold;
+	font-size: 52px;
+	letter-spacing: -0.5px;
+	margin-bottom: 30px;
+}
+
+.class-section__list {
+	display: flex;
+	margin: 0px auto 60px;
+	flex-wrap: wrap;
+	max-width: 1200px;
+}
+
+.class-section__list__card {
+	display: flex;
+	margin-right: 60px;
+	margin-bottom: 30px;
+	cursor: pointer;
+	width: 370px;
+}
+
+.class-section__list__end-card {
+	display: flex;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+.study-class-last {
+	display: flex;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+.class-section__list__card-back {
+	width: 370px;
+}
+
+.class-section__list__card-img img {
+	width: 100%;
+	border-radius: 4px;
+}
+
+.class-section__list__card-title {
+	font-weight: bold;
+	font-size: 24px;
+	margin-top: 16px;
+	word-break: break-all;
+	line-height: 1.5;
+}
+
+.class-section__list__card-content {
+	font-size: 16px;
+	color: rgb(130, 130, 130);
+	margin-bottom: 16px;
+	line-height: 1.5;
+}
+
+.class-section__list__card-price {
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 50px;
+}
+
+/* kakao_ask */
+.kakao_ask img {
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	top: 85%;
+	right: 5%;
+	background: 0% 0% / contain no-repeat;
+}
+
+/* footer - 푸터 (하단 메뉴) */
+.footer {
+	background: rgb(17, 17, 17);
+	color: rgb(255, 255, 255);
+	padding: 30px 0px;
+	margin-top: 80px;
+}
+
+.footer__inner {
+	max-width: 1200px;
+	margin: 0px auto;
+}
+
+.footer__inner__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__inner__header-number {
+	font-size: 2.5rem;
+	line-height: 4rem;
+}
+
+.social-logo {
+	margin-right: 60px;
+	cursor: pointer;
+}
+
+.small {
+	width: 30px;
+}
+
+.medium {
+	width: 34px;
+}
+
+.last {
+	width: 47.5px;
+}
+
+.footer__inner__hours,
+.footer__inner__manager-emali {
+	font-size: 0.9rem;
+	font-weight: bold;
+	letter-spacing: -0.05rem;
+	line-height: 1rem;
+}
+
+.footer__inner__policy {
+	margin-top: 60px;
+	margin-bottom: 15px;
+}
+
+.footer__inner__policy a {
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-right: 30px;
+}
+
+.footer__inner__information {
+	margin-top: 30px;
+}
+
+.footer__inner__information-list {
+	display: flex;
+}
+
+.information-list li {
+	font-size: 1.4rem;
+}
+
+.information-list-one {
+	margin-right: 20px;
+}
+
+.information-list__two,
+.information-list__three {
+	margin: 0 20px;
+}
+
+.information-list__four {
+	margin-left: 20px;
+}
+
+.footer__inner,
+.footer__inner__header,
+.footer__inner__header-number,
+.footer__inner__hours,
+.footer__inner__manager-emali,
+.footer__inner__policy,
+.footer__inner__policy a,
+.footer__inner__information-list,
+.footer__inner__information-list li,
+.footer-content,
+.footer__inner__header-social,
+.footer__inner__header-social > a,
+.footer__inner__header-social > a > img {
+	background-color: rgb(17, 17, 17);
+}

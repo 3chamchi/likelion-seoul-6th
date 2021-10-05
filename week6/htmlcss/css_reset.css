@@ -1,0 +1,203 @@
+* {
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+	background-color: black;
+	color: white;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+	text-decoration-line: none;
+}
+
+input {
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+}
+
+button {
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+}
+
+/* 
+CSS 초기화란 브라우저마다 다르게 적용되어 있는 CSS 기본 값들을 제거해 주는 것을 뜻합니다.
+
+대표적인 브라우저에는 Microsoft의 인터넷 익스플로러(Internet Explorer), Google의 크롬(Chrome), Apple의 사파리(Safari), Mozila의 파이어폭스(Firefox) 등이 있으며, 브라우저들마다 내장되어 있는 CSS의 기본값들이 서로 다르게 설정되어 있습니다.
+
+따라서, 웹 프로그래밍 시 분명히 동일한 코드인데도 불구하고 브라우저에 따라 생성된 결과가 다르게 나오는 황당한 경우가 종종 발생하게 됩니다.
+이러한 문제를 해결하기 위하여, 브라우저의 CSS 기본 값을 제거하는 CSS 초기화 코드들이 나오게 되었고 웹 프로그래밍을 하기 전 먼저 CSS 초기화를 하고 코딩을 시작하시면 되겠습니다.
+
+---- css 초기화 코드에 정해져 있는 규칙은 없습니다. ----
+---- 필요에 맞게 수정해서 사용하면 되겠습니다. ----
+ */
+
+/* -------------------------------------------------------------------- */
+
+/* 
+container란 ?
+레이아웃을 만드는 가장 상위 요소에 .container 라는 선택자 이름 을 사용함 으로써 
+전체 가로폭을 정하는 클래스 값 입니다. 
+*/
+
+.container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.container-wd {
+	background-color: rgb(17, 17, 17);
+	width: 100%;
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1800px;
+	}
+}
+
+/* -------------------------------------------------------------------- */
