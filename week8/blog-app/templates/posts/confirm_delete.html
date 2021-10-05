@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <title>글 삭제</title>
-</head>
-
+<head><title>글 삭제</title></head>
 <body>
     <h1>글 삭제</h1>
     <form action="" method="POST">
         {% csrf_token %}
-        <div>
-            <p>{{ post.id }}. {{ post.title }}</p>
-            <p>작성자 : {{ post.created_by }}, 작성일 : {{ post.created_at }}</p>
-            <p>{{ post.content }}}</p>
-        </div>
+        {% include 'mixins/post_card.html' %}
         <div>
             <p>위 글을 삭제하시겠습니까?</p>
             <p>삭제된 글은 복원할 수 없습니다.</p>
@@ -22,5 +14,4 @@
         <a href="{{ request.META.HTTP_REFERER }}">뒤로가기</a>
     </form>
 </body>
-
 </html>
