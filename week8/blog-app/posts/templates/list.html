@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<<<<<<< HEAD
-    <title>글목록</title>
-</head>
-<body>
-    <h1>Post 리스트 페이지</h1>
-    <div><a href="{% url 'new' %}">글쓰기</a></div>  {# {% url 'new' %} urls.py에 name이 new인 url로 치환 #}
-=======
     <title>글 목록</title>
 </head>
 <body>
     <h1>글 목록 페이지</h1>
     <div><a href="{% url 'new' %}">글쓰기</a></div>
->>>>>>> main
     <table border="1">
         <tr>
             <th>번호</th>
@@ -21,21 +13,12 @@
             <th>작성자</th>
             <th>작성일</th>
         </tr>
-<<<<<<< HEAD
-        {% for post in post_all %}  {# views에서 입력한 context변수의 Key값이 post_all 사용하며 반복문으로 반복 실행 #}
-        <tr>
-            <td>{{ post.id }}</td> {# {{ post.id }} 반복되는 post 변수의 id 필드 출력 #}
-            <td><a href="{% url 'detail' post.id %}">{{ post.title }}</a></td>  {# {% url 'detail' post.id %} urls.py에 name이 detail인 url로 치환하며 id에 post.id 치환 #}
-            <td>{{ post.created_by }}</td> {# {{ post.created_by }} 반복되는 post 변수의 created_by 필드 출력 #}
-            <td>{{ post.created_at }}</td> {# {{ post.created_at }} 반복되는 post 변수의 created_at 필드 출력 #}
-=======
         {% for post in post_all %}
         <tr>
             <td>{{ post.id }}</td>
             <td><a href="{% url 'detail' post.id %}">{{ post.title }}</a></td>
             <td>{{ post.created_by }}</td>
             <td>{{ post.created_at }}</td>
->>>>>>> main
         </tr>
         {% endfor %}
     </table>

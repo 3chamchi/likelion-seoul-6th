@@ -2,28 +2,6 @@
 <html lang="ko">
 
 <head>
-<<<<<<< HEAD
-    <title>글쓰기</title>
-</head>
-
-<body>
-    <h1>글쓰기</h1>
-    <form action="{% url 'create' %}" method="POST">
-        {% csrf_token %}  {# CSRF 공격 방지를 위한 태그 추가 #}
-        <div>
-            <label for="">제목</label>
-            <input type="text" name="title">
-        </div>
-        <div>
-            <label for="">내용</label>
-            <textarea name="content"></textarea>
-        </div>
-        <div>
-            <label for="">작성자</label>
-            <input type="text" name="created_by">
-        </div>
-        <input type="submit" value="등록하기">
-=======
     <title>{{ title }}</title>
 </head>
 
@@ -45,7 +23,6 @@
         </div>
         <input type="submit" value="{{ submit_text }}">
         <a href="{{ request.META.HTTP_REFERER }}">뒤로가기</a>
->>>>>>> main
     </form>
 </body>
 
