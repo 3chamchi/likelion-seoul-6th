@@ -44,19 +44,24 @@ def detail(request, id):
     context = {'post': post}
     return render(request, 'detail.html', context)
 
-def new(request):
-    context = {'title':'글 등록', 'submit_text': '등록하기'}
-    return render(request, 'form.html', context)
-
+# def new(request):
+#         context = {'title':'글 등록', 'submit_text': '등록하기'}
+#         return render(request, 'form.html', context)
+    
 def create(request):
-    now = datetime.now()  # 현재 시간을 구하기 위한 함수
-    title = request.POST['title']  # 클라이언트에서 POST 요청으로 넘어온 form의 name=title인 값을 title 변수에 할당
-    content = request.POST['content']  # 클라이언트에서 POST 요청으로 넘어온 form의 name=content인 값을 content 변수에 할당
-    created_by = request.POST['created_by']  # 클라이언트에서 POST 요청으로 넘어온 form의 name=created_by인 값을 created_by 변수에 할당
-    post = Post.objects.create(
-        title=title,  # Post 모델 title 필드에 title 변수 값 입력
-        content=content,  # Post 모델 content 필드에 content 변수 값 입력
-        created_by=created_by,  # Post 모델 created_by 필드에 created_by 변수 값 입력
-        created_at=now,  # Post 모델 created_at 필드에 now 변수 값 입력
-    )
-    return redirect('/')
+    if request.method == 'POST':
+        now = datetime.now()  # 현재 시간을 구하기 위한 함수
+        title = request.POST['title']  # 클라이언트에서 POST 요청으로 넘어온 form의 name=title인 값을 title 변수에 할당
+        content = request.POST['content']  # 클라이언트에서 POST 요청으로 넘어온 form의 name=content인 값을 content 변수에 할당
+        created_by = request.POST['created_by']  # 클라이언트에서 POST 요청으로 넘어온 form의 name=created_by인 값을 created_by 변수에 할당
+        post = Post.objects.create(
+            title=title,  # Post 모델 title 필드에 title 변수 값 입력
+            content=content,  # Post 모델 content 필드에 content 변수 값 입력
+            created_by=created_by,  # Post 모델 created_by 필드에 created_by 변수 값 입력
+            created_at=now,  # Post 모델 created_at 필드에 now 변수 값 입력
+        )
+        return redirect('/')
+    else:
+        context = {'title':'글 등록', 'submit_text': '등록하기'}
+        return render(request, 'form.html', context)
+
