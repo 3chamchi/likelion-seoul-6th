@@ -4,6 +4,19 @@
     <title>{% block title %}{% endblock %} | 멋직</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">홈</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'accounts:logout' %}">로그아웃</a></li>
+                {% else %}
+                    <li><a href="{% url 'accounts:login' %}">로그인</a></li>
+                    <li><a href="{% url 'accounts:signup' %}">회원가입</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
 {% block content %}{% endblock%}
 
 {% block javascript %}{% endblock %}

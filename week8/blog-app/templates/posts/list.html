@@ -4,7 +4,7 @@
 
 {% block content %}
 <h1>글 목록 페이지</h1>
-<div><a href="{% url 'create' %}">글쓰기</a></div>
+<div><a href="{% url 'posts:create' %}">글쓰기</a></div>
 <table border="1">
     <tr>
         <th>번호</th>
@@ -15,7 +15,7 @@
     {% for post in post_all %}
     <tr>
         <td>{{ post.id }}</td>
-        <td><a href="{% url 'detail' post.id %}">{{ post.title }}</a></td>
+        <td><a href="{% url 'posts:detail' post.id %}">{{ post.title }}</a></td>
         <td>{{ post.created_by }}</td>
         <td>{{ post.created_at }}</td>
     </tr>

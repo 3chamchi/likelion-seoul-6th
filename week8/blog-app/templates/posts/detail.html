@@ -4,8 +4,8 @@
 <body>
     <h1>글 상세페이지</h1>
     {% include 'mixins/post_card.html' %}
-    <a href="{% url 'list' %}">목록보기</a>
-    <a href="{% url 'update' post.id %}">수정하기</a>
-    <a href="{% url 'delete' post.id %}">삭제하기</a>
+    <a href="{% url 'posts:list' %}">목록보기</a>
+    <a href="{% url 'posts:update' post.id %}">수정하기</a>
+    <a href="{% url 'posts:delete' post.id %}">삭제하기</a>
 </body>
 </html>
