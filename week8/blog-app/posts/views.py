@@ -5,31 +5,32 @@ from django.shortcuts import render, redirect
 
 from .models import Post
 
-def delete(request, id):
+def delete(request, id):  # url 패턴의 /delete/<int:id>/ 의 id 값으로 데이터베이스 조회
+    """ 게시글 삭제 View """
     context = {}
-    post = Post.objects.get(id=id)
+    post = Post.objects.get(id=id)  # Post 모델으 id 필드가 id인 데이터 조회
     if request.method == 'POST':
-        post.delete()
-        return redirect('list')
+        post.delete()  # POST 요청인 경우 데이터 삭제
+        return redirect('posts:list')  # url name list url로 리다이렉트 응답
     else:
-        context.update(post=post)
+        context.update(post=post)  # 10 줄에서 생성한 context 변수에 post 키로 post 값 업데이트
         return render(request, 'posts/confirm_delete.html', context)
 
-def update(request, id):
-    context = {'title':'글 수정', 'submit_text': '수정하기'}
-    post = Post.objects.get(id=id)
+def update(request, id):  # url 패턴의 /update/<int:id>/ 의 id 값으로 데이터베이스 조회
+    context = {'title':'글 수정', 'submit_text': '수정하기'}  # form.html 사용 시 제목과 제출 버튼 이름 지정
+    post = Post.objects.get(id=id)  # Post 모델으 id 필드가 id인 데이터 조회
     if request.method == 'POST':
-        title = request.POST['title']
-        content = request.POST['content']
-        created_by = request.POST['created_by']
+        title = request.POST['title']  # form > input name이 title 값 가져오기
+        content = request.POST['content']  # form > input name이 content 값 가져오기
+        created_by = request.POST['created_by']  # form > input name이 created_by 값 가져오기
         
-        post.title = title
-        post.content = content
-        post.created_by = created_by
-        post.save()
-        return redirect('detail', id)
+        post.title = title  # 21 줄에서 조회한 객체의 title 값 변경
+        post.content = content  # 21 줄에서 조회한 객체의 content 값 변경
+        post.created_by = created_by  # 21 줄에서 조회한 객체의 created_by 값 변경
+        post.save()  # 데이터베이스에 반영(저장)
+        return redirect('posts:detail', id)  # url 패턴 detial에 id값을 넣어 리다이렉트
     else:
-        context.update(post=post)
+        context.update(post=post)  # form에 기존 값 추가를 위해 21에서 조회한 Post 인스턴스 context에 업데이트
         return render(request, 'posts/form.html', context)
         
         
@@ -60,7 +61,7 @@ def create(request):
             created_by=created_by,  # Post 모델 created_by 필드에 created_by 변수 값 입력
             created_at=now,  # Post 모델 created_at 필드에 now 변수 값 입력
         )
-        return redirect('/')
+        return redirect('home')
     else:
         context = {'title':'글 등록', 'submit_text': '등록하기'}
         return render(request, 'posts/form.html', context)
