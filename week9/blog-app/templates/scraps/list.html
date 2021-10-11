@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}스크랩 목록{% endblock %}
+
+{% block content %}
+<h1>스크랩 목록</h1>
+<ul>
+    {% for scrap in scrap_list %}
+    <li>{{ scrap.post.title }} <a href="{% url 'posts:detail' scrap.post.id %}">바로가기</a></li>
+    {% empty %}
+    <li>스크랩이 없습니다.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

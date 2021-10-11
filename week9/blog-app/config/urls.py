@@ -10,4 +10,5 @@ urlpatterns = [
 
     path('accounts/', include('accounts.urls')),  # accounts 앱의 urls 사용
     path('posts/', include('posts.urls')),  # posts 앱의 urls 사용
+    path('scraps/', include('scraps.urls')),
 ]
