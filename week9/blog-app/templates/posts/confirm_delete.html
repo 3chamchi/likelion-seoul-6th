@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}글 삭제{% endblock %}
+
+{% block content %}
+<h1>글 삭제</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {% include 'mixins/post_card.html' %}
+    <div>
+        <p>위 글을 삭제하시겠습니까?</p>
+        <p>삭제된 글은 복원할 수 없습니다.</p>
+    </div>
+    <input type="submit" value="삭제하기">
+    <a href="{{ request.META.HTTP_REFERER }}">뒤로가기</a>
+</form>
+{% endblock %}

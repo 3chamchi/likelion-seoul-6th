@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="">제목</label>
+            <input type="text" name="title" value="{{ post.title }}">
+        </div>
+        <div>
+            <label for="">내용</label>
+            <textarea name="content">{{ post.content }}</textarea>
+        </div>
+        <div>
+            <label for="">작성자</label>
+            <input type="text" name="created_by" value="{{ post.created_by }}">
+        </div>
+        <input type="submit" value="{{ submit_text }}">
+        <a href="{{ request.META.HTTP_REFERER }}">뒤로가기</a>
+        <a href="{% url 'posts:list' %}">목록으로</a>
+    </form>
+{% endblock %}
