@@ -1,9 +1,28 @@
 from datetime import datetime
 
-from django.contrib.admin.decorators import register
-from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import get_object_or_404, render, redirect
 
-from .models import Post
+from .models import Post, Comment, Scrap
+
+@login_required  # 로그인한 경우에만 허용
+def scrap(request, id):
+    post = get_object_or_404(Post, id=id)
+    scrap_filter = Scrap.objects.filter(user=request.user, post=post)
+    if len(scrap_filter) < 1:
+        Scrap.objects.create(user=request.user, post=post)
+    else:
+        scrap_filter.delete()
+
+    url = request.META.get('HTTP_REFERER', '/')
+    return redirect(url)
+    
+
+def comment_create(request, id):
+    post = get_object_or_404(Post, id=id)
+    content = request.POST.get('content')
+    Comment.objects.create(content=content, post=post)
+    return redirect('posts:detail', post.id)
 
 def delete(request, id):  # url 패턴의 /delete/<int:id>/ 의 id 값으로 데이터베이스 조회
     """ 게시글 삭제 View """
@@ -42,7 +61,9 @@ def list(request):
 
 def detail(request, id):
     post = Post.objects.get(id=id)  # Post 모델의 특정 데이터 조회
-    context = {'post': post}
+    comment_list = Comment.objects.filter(post=post)  # Comment 모델의 post필드가 위에서 조회한 post인 것 조회
+    scrap = Scrap.objects.filter(user=request.user, post=post)
+    context = {'post': post, 'comment_list': comment_list, 'scrap': scrap}
     return render(request, 'posts/detail.html', context)
 
 # def new(request):
