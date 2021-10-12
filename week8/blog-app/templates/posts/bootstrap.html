@@ -1,9 +1,23 @@
 {% extends 'base.html' %}
-{% block title %}글목록{% endblock %}
+{% block title %}글 목록{% endblock %}
 {% block content %}
-<h1>글 목록 페이지</h1>
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        카드
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        카드
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        카드
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+        카드
+    </div>
+</div>
+<!-- <h1>글 목록 페이지</h1>
 <div><a href="{% url 'create' %}" class="btn btn-primary">글쓰기</a></div>
-<table border="1" class="table">
+<table class="table">
     <tr>
         <th>번호</th>
         <th>제목</th>
@@ -18,5 +32,5 @@
         <td>{{ post.created_at }}</td>
     </tr>
     {% endfor %}
-</table>
+</table> -->
 {% endblock %}
