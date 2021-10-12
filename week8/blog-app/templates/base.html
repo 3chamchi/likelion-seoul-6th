@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}{% endblock %} | 멋직 블로그</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>{% block title %}{% endblock %} | 멋직</title>
 </head>
-
 <body>
-    <!-- {% include 'partials/header.html' %} -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">홈</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'accounts:logout' %}">로그아웃</a></li>
+                {% else %}
+                    <li><a href="{% url 'accounts:login' %}">로그인</a></li>
+                    <li><a href="{% url 'accounts:signup' %}">회원가입</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+{% block content %}{% endblock%}
 
-    {% block content %}{% endblock%}
-
-    <!-- {% include 'partials/footer.html' %} -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
+{% block javascript %}{% endblock %}
 </body>
-
 </html>
