@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}이미지{% endblock %}
+
+{% block content %}
+<h1>이미지 업로드</h1>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="">제목</label>
+    <input type="text" name="title" placeholder="사진 제목"><br>
+    <label for="">이미지</label>
+    <input type="file" name="image"><br>
+    <label for="">내용</label>
+    <input type="text" name="description" placeholder="글"><br>
+    <input type="submit" value="글쓰기"><br>
+</form>
+{% endblock %}
