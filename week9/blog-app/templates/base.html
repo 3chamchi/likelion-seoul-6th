@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>{% block title %}{% endblock %} | 멋직</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'likelion.png' %}" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">홈</a></li>
+                <li><a href="{% url 'posts:list' %}">게시판</a></li>
+                <li><a href="{% url 'photolog:list' %}">이미지</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'scraps:list' %}">스크랩 보기</a></li>
+                    <li><a href="{% url 'accounts:logout' %}">로그아웃</a></li>
+                {% else %}
+                    <li><a href="{% url 'accounts:login' %}">로그인</a></li>
+                    <li><a href="{% url 'accounts:signup' %}">회원가입</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+{% block content %}{% endblock%}
+
+{% block javascript %}{% endblock %}
+</body>
+</html>

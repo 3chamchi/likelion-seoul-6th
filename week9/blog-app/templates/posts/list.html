@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}글 목록 {% endblock %}
+
+{% block content %}
+<h1>글 목록 페이지</h1>
+<div><a href="{% url 'posts:create' %}">글쓰기</a></div>
+<table border="1">
+    <tr>
+        <th>번호</th>
+        <th>제목</th>
+        <th>작성자</th>
+        <th>작성일</th>
+    </tr>
+    {% for post in post_all %}
+    <tr>
+        <td>{{ post.id }}</td>
+        <td><a href="{% url 'posts:detail' post.id %}">{{ post.title }}</a></td>
+        <td>{{ post.created_by }}</td>
+        <td>{{ post.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}이미지{% endblock %}
+
+{% block content %}
+<h1>이미지</h1>
+<div></div>
+
+<a href="{% url 'photolog:create' %}">이미지 업로드</a>
+<div>
+{% for photolog in photolog.all %}
+    {{ photolog.title }}<br>
+    {% if photolog.image %}
+    <img src="{{ photolog.image.url }}"><br>
+    {% endif %}
+    {{ photolog.description }}<br>
+{% endfor %}
+</div>
+{% endblock %}

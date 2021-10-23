@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}글 상세{% endblock %}
+
+{% block content %}
+<h1>글 상세페이지</h1>
+{% include 'mixins/post_card.html' %}
+<a href="{% url 'posts:list' %}">목록보기</a>
+<a href="{% url 'posts:update' post.id %}">수정하기</a>
+<a href="{% url 'posts:delete' post.id %}">삭제하기</a>
+<a href="{% url 'posts:scrap' post.id %}">
+    {% if scrap %}
+    스크랩 취소
+    {% else %}
+    스크랩
+    {% endif %}
+</a>
+{{scrap}}
+<hr>
+<form action="{% url 'posts:comment_create' post.id %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="content">
+    <input type="submit" value="댓글 작성하기">
+</form>
+
+{% for comment in comment_list %} {# view context로 전달 받은 변수 #}
+<p>{{ comment.content }} | {{ comment.created_at }}</p>
+{% empty %} {# 반복 데이터가 없는 경우 출력 #}
+<p>댓글이 없습니다.</p>
+{% endfor %}
+{% endblock %}
